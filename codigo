@@ -1,0 +1,71 @@
+//nome
+var nome = document.querySelector("#nome")
+nome.addEventListener("change",lerNome)
+
+//nivel
+var nivel = document.querySelector("#nivel")
+nivel.addEventListener("change",lerNivel)
+
+//força
+var forca = document.querySelector("#forca")
+forca.addEventListener("change",lerForca)
+
+//poder de ataque
+var poderataque = document.querySelector("#poder")
+forca.addEventListener("change",lerPoder)
+nivel.addEventListener("change",lerPoder)
+
+//armadura
+var armadura = document.querySelector("#armadura")
+armadura.addEventListener("change",lerArmadura)
+
+//agilidade
+var agilidade = document.querySelector("#agilidade")
+agilidade.addEventListener("change",lerAgilidade)
+
+//defesa
+var defesa = document.querySelector("#defesa")
+armadura.addEventListener("change",lerDefesa)
+agilidade.addEventListener("change",lerDefesa)
+
+//////////////////////////////////////////////////////////////
+function lerNome() {
+
+console.log(nome.value)
+}
+
+function lerNivel(){
+
+var nivel_numero = parseInt(nivel.value)
+if (nivel_numero >= 5) {
+console.log(nome.value + "[VETERANO]")
+}
+else {
+console.log(nome.value + "[INICIANTE]")
+}
+}
+
+function lerForca(){
+
+console.log(forca.value)
+}
+
+function lerPoder(){
+poderataque.value = (forca.value - 10)/2 + nivel.value/2
+
+console.log(poderataque.value)
+}
+
+function lerDefesa(){
+
+defesa.value = (agilidade.value) + (armadura.value)
+console.log(defesa.value)
+}
+function lerArmadura(){
+
+console.log(armadura.value)
+}
+function lerAgilidade(){
+
+console.log(agilidade.value)
+}
